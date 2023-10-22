@@ -1,0 +1,249 @@
+/* Default styles for mobile (mobile-first approach) */
+.left, .main, .right {
+    float: left;
+    width: 100%;
+    /* The width is 100%, by default for mobile */
+}
+#skip {
+    position: absolute;
+    left: -500px;
+}
+
+#skip:focus {
+    left: 100px;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #00274C;
+}
+
+.nav {
+    padding: 10px;
+    padding-top: 25px;
+  }
+
+.nav-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equally spaced columns for mobile */
+    gap: 20px; /* Adjust the gap as needed for mobile */
+    list-style: none;
+    padding: 0;
+    margin: auto;
+  }
+ 
+.nav-link {
+    color: #caf0f8;
+    border: 1px solid white;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px; /* Add padding to make it touch-friendly on mobile */
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.nav-link:visited {
+    color: #d7e3fc;
+}
+
+#pets{
+    font-weight: bold;
+    /* background-color: ; */
+    color:#FFCB05;
+    border: 3px solid #FFCB05
+}
+#recipes{
+    font-weight: bold;
+    /* background-color: ; */
+    color:#FFCB05;
+    border: 3px solid #FFCB05
+}
+#travel{
+    font-weight: bold;
+    /* background-color: ; */
+    color:#FFCB05;
+    border: 3px solid #FFCB05
+}
+
+@keyframes spinAndColorChange {
+    0% {
+      transform: rotate(0deg);
+      color: white;
+    }
+    50% {
+      transform: rotate(180deg);
+      color: #FFCB05;
+    }
+    100% {
+      transform: rotate(360deg);
+      color: white;
+    }
+  }
+ 
+h1 {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 15px;
+    animation-name: spinAndColorChange;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+}
+@media (prefers-reduced-motion) {
+    h1 {
+        animation: none;
+        color: white
+    }
+    .animated-gif {
+        display: none;
+    }
+}
+
+h2 {
+    padding-top: 20px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #FFCB05;
+}
+
+p {
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #FFCB05;
+    padding-top: 15px;
+}
+
+img, video {
+    border-style: solid, 5px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    width:  350px;
+    height: 350px;
+    object-fit: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.thumbnail {
+    padding: 5px 20px 10px 20px;
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    list-style-type: disc;
+    padding: 0px 30px 30px 30px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+figcaption {
+    font-size: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+    font-size: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ol {
+    color: white;
+    padding: 0px 30px 30px 30px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Media query for screens 800px or larger (desktop/tablet) */
+@media screen and (min-width: 800px) {
+    .left, .main, .right {
+        width: 20%;
+        /* The width is 20%, when the viewport is 800px or larger (desktop/tablet) */
+    }
+
+    body {
+        background-color: #B3C7F7;
+        color: black
+    }
+
+    h1 {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: #8BABF1;
+    }
+
+    h3 {
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: #0073E6;
+    }
+
+    p {
+        line-height: 20px;
+    }
+
+    img {
+        border-style: solid, 5px;
+        padding: 10px;
+        margin: 20px;
+        border-top-right-radius: 30px;
+    }
+
+    ul {
+        display: inline-block;
+        margin-left: 50px;
+    }
+
+    nav {
+        border: 2px solid black
+    }
+
+    li {
+        display: inline-block;
+        padding: 10px;
+        color: blue;
+        margin: auto
+    }
+
+    nav a {
+        background-color: lightgrey;
+        /* padding: 5px;
+    margin: 20px; */
+    }
+
+    #skip {
+        position: absolute;
+        left: -500px;
+    }
+
+    #skip:focus {
+        left: 50px;
+        text-transform: uppercase;
+    }
+}
