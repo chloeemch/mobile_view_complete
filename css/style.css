@@ -7,11 +7,13 @@
 #skip {
     position: absolute;
     left: -500px;
+    color: white;
 }
 
 #skip:focus {
     left: 100px;
     text-transform: uppercase;
+    color: white;
 }
 
 body {
